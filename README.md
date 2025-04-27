@@ -33,23 +33,19 @@ Este script foi desenvolvido para o Debian 12, mas pode ser adaptado para outras
 
 ## Como usar
 
-1. Clone o repositório no seu servidor ou máquina local:
-
+1. Clone o repositório:
     ```bash
-    git clone https://github.com/SEU_USUARIO/nome-do-repositorio.git
-    cd nome-do-repositorio
+    git clone https://github.com/joaolucasrossato/Script-Debian12.git
     ```
 
 2. Torne o script executável:
-
     ```bash
-    chmod +x script.sh
+    chmod +x post-install.sh
     ```
 
 3. Execute o script:
-
     ```bash
-    ./script.sh
+    sudo ./post-install.sh
     ```
 
 4. Siga as instruções no menu para escolher as opções que deseja instalar.
