@@ -60,7 +60,7 @@ EOF
       apt install sudo -y
       read -p "Digite o nome do seu usuário para adicionar ao grupo sudo: " USUARIO
       adduser "$USUARIO" sudo
-      echo "Configuração concluída. Será necessário reiniciar a máquina para habilitat o SUDO."
+      echo "Configuração concluída. Será necessário reiniciar a máquina para habilitar o SUDO."
       ;;
   
     6) 
@@ -98,7 +98,7 @@ EOF
       echo "Gerando chave SSH..."
       ssh-keygen -t ed25519 -C "$GIT_EMAIL"
       cat ~/.ssh/id_ed25519.pub
-      echo "\nAdicione esta chave ao seu GitHub"
+      echo -e "\nAdicione esta chave ao seu GitHub"
       ;;
     
     11)
@@ -166,7 +166,9 @@ EOF
       ;;
       
     14)
-      flatpak install flathub com.google.Chrome com.microsoft.Edge org.mozilla.firefox -y
+      flatpak install flathub com.google.Chrome -y
+      flatpak install flathub com.microsoft.Edge -y
+      flatpak install flathub org.mozilla.firefox -y
       flatpak install flathub org.onlyoffice.desktopeditors -y
       flatpak install flathub com.discordapp.Discord -y
       flatpak install flathub com.visualstudio.code -y
@@ -190,7 +192,8 @@ EOF
       break
       ;;
 
-  *)
-    echo "Opção Inválida."
-    ;;
-esac
+    *)
+      echo "Opção Inválida."
+      ;;
+  esac
+done
